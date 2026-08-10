@@ -164,11 +164,17 @@ function onImgError() {
   font-size: 0.76rem; color: var(--bk-text-muted); line-height: 1.5; margin: 0;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
+@media (max-width: 480px) {
+  .item-body { padding: 0.75rem 0.85rem 0.4rem; }
+  .item-name { font-size: 0.88rem; }
+  .item-desc { font-size: 0.72rem; }
+}
 
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 .item-footer {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.75rem 1rem; border-top: 1px solid var(--bk-border); gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .item-price {
   font-size: 1rem; font-weight: 900; color: var(--bk-primary); white-space: nowrap;
@@ -182,7 +188,7 @@ function onImgError() {
   font-size: 0.78rem; font-weight: 700; cursor: pointer;
   transition: transform 0.15s, box-shadow 0.2s, background 0.3s;
   box-shadow: 0 3px 10px rgba(225,29,72,0.3); white-space: nowrap;
-  min-width: 90px; justify-content: center;
+  flex-shrink: 0;
 }
 .btn-add:hover:not(:disabled) {
   transform: scale(1.07);
@@ -190,6 +196,23 @@ function onImgError() {
 }
 .btn-add:active:not(:disabled) { transform: scale(0.96); }
 .btn-add:focus-visible { outline: 2px solid var(--bk-primary); outline-offset: 2px; }
+
+/* Sur mobile : footer en colonne si besoin */
+@media (max-width: 480px) {
+  .item-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.7rem 0.85rem;
+  }
+  .item-price { font-size: 1.05rem; }
+  .btn-add {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}
 
 /* État "Ajouté !" */
 .btn-add--done {

@@ -25,9 +25,13 @@ function select(id) { emit('update:modelValue', id) }
 
 <style scoped>
 .menu-filter {
-  display: flex; gap: 0.5rem; flex-wrap: wrap;
+  display: flex; gap: 0.5rem; flex-wrap: nowrap;
   padding: 1rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+.menu-filter::-webkit-scrollbar { display: none; }
 
 .filter-btn {
   display: inline-flex; align-items: center; gap: 0.4rem;
@@ -35,7 +39,7 @@ function select(id) { emit('update:modelValue', id) }
   border-radius: 9999px; border: 2px solid var(--bk-border);
   background: var(--bk-surface); color: var(--bk-text-muted);
   font-size: 0.85rem; font-weight: 600; cursor: pointer;
-  transition: all 0.2s ease; white-space: nowrap;
+  transition: all 0.2s ease; white-space: nowrap; flex-shrink: 0;
   box-shadow: var(--bk-shadow-sm);
 }
 .filter-btn:hover {
@@ -54,6 +58,6 @@ function select(id) { emit('update:modelValue', id) }
 .filter-emoji { font-size: 1rem; }
 
 @media (max-width: 640px) {
-  .filter-btn { padding: 0.4rem 0.8rem; font-size: 0.78rem; }
+  .filter-btn { padding: 0.45rem 0.85rem; font-size: 0.8rem; }
 }
 </style>
