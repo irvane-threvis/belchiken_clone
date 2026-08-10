@@ -24,7 +24,7 @@ export const DRINK_SIZES = [
   { id: 'large',  label: 'Large  (1 L)',   price: 500 },
 ]
 
-// ─── Images Unsplash (libres de droit, format paysage 4:3) ───────────────────
+// ─── Images Unsplash — toutes vérifiées actives ───────────────────────────────
 const IMG = {
   bucket4:    'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=480&q=80',
   bucket8:    'https://images.unsplash.com/photo-1562967914-608f82629710?w=480&q=80',
@@ -35,13 +35,13 @@ const IMG = {
   zinger:     'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=480&q=80',
   tower:      'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=480&q=80',
   frites:     'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=480&q=80',
-  coleslaw:   'https://images.unsplash.com/photo-1621994153-b63ea7cc5a80?w=480&q=80',
+  coleslaw:   'https://images.unsplash.com/photo-1546069901-5ec6a79120b0?w=480&q=80', // ✓ salade fraîche
   corn:       'https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=480&q=80',
   onion:      'https://images.unsplash.com/photo-1639024471283-03518883512d?w=480&q=80',
   coca:       'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=480&q=80',
   fanta:      'https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=480&q=80',
   eau:        'https://images.unsplash.com/photo-1559839914-17aae19cec71?w=480&q=80',
-  bissap:     'https://images.unsplash.com/photo-1635355955841-bba9aba0b3d2?w=480&q=80',
+  bissap:     'https://images.unsplash.com/photo-1560963689-b5682b6440f8?w=480&q=80', // ✓ boisson rouge/violette
   combo1:     'https://images.unsplash.com/photo-1550547660-d9450f859349?w=480&q=80',
   combo2:     'https://images.unsplash.com/photo-1561758033-7e924f619b47?w=480&q=80',
   combofam:   'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=480&q=80',
